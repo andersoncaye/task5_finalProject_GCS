@@ -6,4 +6,4 @@ jobs:
       name: Laravel Build
       runs-on: ubuntu-20.04
       steps:
-        - uses: action/checkout@v1
+        - uses: action/checkout@v2
