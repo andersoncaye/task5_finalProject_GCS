@@ -1,10 +1,6 @@
 version: '3'
 
 services:
-  apache:
-    build:
-      dockerfile: Dockerfile
-
   mysql:
     image: mysql:5.7.29
     container_name: mysql_homo
