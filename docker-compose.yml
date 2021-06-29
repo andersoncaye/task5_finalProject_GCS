@@ -3,7 +3,7 @@ version: '3'
 services:
   apache:
     build:
-      dockerfile: php7-apache2-dockerfile
+      dockerfile: Dockerfile
       context: .
     image: seu-usuario/php7-apache2-dockerfile
     container_name: php7-apache2
