@@ -27,7 +27,7 @@ class PayTypeTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /** @test */
+    /** @tes */
     public function insert_pay_type()
     {
         $payType = new PayType();
@@ -35,7 +35,7 @@ class PayTypeTest extends TestCase
         $this->assertEquals(1, $response->id > 0);
     }
 
-    /** @test */
+    /** @tes */
     public function edit_pay_type()
     {
         $payType = PayType::orderBy('id', 'desc')->first();
@@ -43,7 +43,7 @@ class PayTypeTest extends TestCase
         $this->assertDatabaseHas('pay_types', [ 'name' => 'Forma Pagamento Edit',]);
     }
 
-    /** @test */
+    /** @tes */
     public function delete_pay_type()
     {
         $payType = PayType::orderBy('id', 'desc')->first();

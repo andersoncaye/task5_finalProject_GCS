@@ -27,7 +27,7 @@ class CategoryTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /** @test */
+    /** @tes */
     public function insert_category()
     {
         $category = new Category();
@@ -37,7 +37,7 @@ class CategoryTest extends TestCase
         $this->assertEquals(1, $response->id > 0);
     }
 
-    /** @test */
+    /** @tes */
     public function edit_category()
     {
         $category = Category::orderBy('id', 'desc')->first();
@@ -47,7 +47,7 @@ class CategoryTest extends TestCase
         $this->assertDatabaseHas('categories', [ 'name' => 'Categoria Edit',]);
     }
 
-    /** @test */
+    /** @tes */
     public function delete_category()
     {
         $category = Category::orderBy('id', 'desc')->first();
