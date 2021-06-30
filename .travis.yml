@@ -1,0 +1,27 @@
+language: php
+
+sudo: required
+
+dist: trusty
+
+php:
+  - '7.3'
+
+os: linux
+
+services: 
+ - mysql
+
+before_install:
+ - mysql -e 'CREATE DATABASE testing;'
+
+before_script:
+ - composer install
+ - cp .env.example .env
+ - php artisan key:generate
+ - php artisan migrate
+# - php artisan jwt:secret
+
+script:
+ - vendor/bin/phpunit
+ - php artisan code:analyse
