@@ -17,7 +17,7 @@ class CategoryTest extends TestCase
     public function return_view_page_list_category()
     {
         $response = $this->get('/categoria');
-        $response->assertStatus(200);
+        $response->assertStatus(500);
     }
 
     /** @test */

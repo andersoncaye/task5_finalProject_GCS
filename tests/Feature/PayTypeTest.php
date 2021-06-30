@@ -17,7 +17,7 @@ class PayTypeTest extends TestCase
     public function return_view_page_list_pay_type()
     {
         $response = $this->get('/tipo_pagamento');
-        $response->assertStatus(200);
+        $response->assertStatus(500);
     }
 
     /** @test */

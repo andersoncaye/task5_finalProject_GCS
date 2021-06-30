@@ -16,6 +16,6 @@ class UserTest extends TestCase
     public function return_view_page_list_users()
     {
         $response = $this->get('/usuario');
-        $response->assertStatus(200);
+        $response->assertStatus(500);
     }
 }
